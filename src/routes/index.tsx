@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Products, ErrorPage } from "../pages";
+import { Home, Products, ErrorPage, ProductDetail } from "../pages";
 import RootLayout from "./RootLayout";
 
 const router = createBrowserRouter([
@@ -14,7 +14,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/products",
-        element: <Products  />
+        element: <Products  />,
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetail />
       }
     ]
   }
